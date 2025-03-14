@@ -153,15 +153,21 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Galería</h2>
         <div class="overflow-x-auto">
           <div class="flex space-x-4">
-            <img src="https://placehold.co/600x400" alt="Imagen 1" class="w-80 h-60 object-cover rounded-lg">
-            <img src="https://placehold.co/600x400" alt="Imagen 2" class="w-80 h-60 object-cover rounded-lg">
-            <img src="https://placehold.co/600x400" alt="Imagen 3" class="w-80 h-60 object-cover rounded-lg">
-            <img src="https://placehold.co/600x400" alt="Imagen 4" class="w-80 h-60 object-cover rounded-lg">
-            <img src="https://placehold.co/600x400" alt="Imagen 5" class="w-80 h-60 object-cover rounded-lg">
+            <img src="https://placehold.co/600x400" alt="Imagen 1" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://placehold.co/600x400" alt="Imagen 2" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://placehold.co/600x400" alt="Imagen 3" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://placehold.co/600x400" alt="Imagen 4" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
+            <img src="https://placehold.co/600x400" alt="Imagen 5" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this)">
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Modal -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeModal(event)">
+      <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
+      <img id="modalImage" class="max-w-full max-h-full">
+    </div>
 
     <section id="ubicacion" class="py-16 md:py-24">
       <div class="container">
@@ -303,4 +309,17 @@
     </div>
   </footer>
 </body>
+<script>
+  function openModal(element) {
+    document.getElementById('modalImage').src = element.src;
+    document.getElementById('imageModal').classList.remove('hidden');
+  }
+
+  function closeModal(event) {
+    if (event.target.id === 'imageModal' || event.target.tagName === 'SPAN') {
+      document.getElementById('imageModal').classList.add('hidden');
+    }
+  }
+</script>
 </html>
+
