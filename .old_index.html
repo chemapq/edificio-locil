@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Edificio Locil</title>
+  <title>Edificio Riosar</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -25,10 +25,10 @@
   </script>
 </head>
 <body class="flex flex-col min-h-screen">
-  <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div class="container flex h-16 items-center justify-between">
       <a href="/" class="flex items-center space-x-2">
-        <span class="text-xl font-bold">Edificio Locil</span>
+        <span class="text-xl font-bold">Edificio Riosar</span>
       </a>
       <nav class="hidden md:flex gap-6">
         <a href="#caracteristicas" class="text-sm font-medium hover:underline underline-offset-4">
@@ -44,7 +44,7 @@
           Contacto
         </a>
       </nav>
-      <a href="#contacto" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+      <a href="#contacto" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2">
         Solicitar información
       </a>
     </div>
@@ -54,16 +54,16 @@
     <section class="relative h-[80vh]">
       <img
         src="lateralD.webp"
-        alt="Edificio Locil"
+        alt="Edificio Riosar"
         class="absolute inset-0 w-full h-full object-cover"
       />
       <div class="absolute inset-0 bg-black/40">
         <div class="container h-full flex flex-col justify-center text-white">
           <h1 class="text-4xl md:text-6xl font-bold max-w-2xl">
-            Descubre tu nuevo hogar en Edificio Locil
+            Descubre tu nuevo hogar en Edificio Riosar
           </h1>
           <p class="mt-4 text-xl md:text-2xl max-w-xl">
-            Viviendas de lujo con las mejores calidades en una ubicación privilegiada
+            Viviendas de obra nueva con las excelentes calidades en una ubicación privilegiada
           </p>
           <a href="#contacto" class="mt-8 w-fit inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8 py-3">
             Solicitar información
@@ -105,7 +105,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="https://placehold.co/400x300"
+              src="/lateralD.webp"
               alt="Vivienda tipo A"
               class="w-full object-cover"
             />
@@ -113,63 +113,63 @@
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo A</h3>
               <p class="text-gray-500 mb-4">3 dormitorios · 2 baños · 120m²</p>
               <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://kotekvirtual.es/visita-virtual-prueba/')">
-                Ver detalles
+                Ver visita
               </button>
             </div>
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="https://placehold.co/400x300"
+              src="/lateralD.webp"
               alt="Vivienda tipo B"
               class="w-full object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo B</h3>
               <p class="text-gray-500 mb-4">2 dormitorios · 2 baños · 90m²</p>
-              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://example.com/vivienda-tipo-b')">
-                Ver detalles
+              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://kotekvirtual.es/visita-virtual-prueba/')">
+                Ver visita
               </button>
             </div>
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="https://placehold.co/400x300"
+              src="/lateralD.webp"
               alt="Vivienda tipo C"
               class="w-full object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo C</h3>
               <p class="text-gray-500 mb-4">4 dormitorios · 3 baños · 150m²</p>
-              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://example.com/vivienda-tipo-c')">
-                Ver detalles
+              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://kotekvirtual.es/visita-virtual-prueba/')">
+                Ver visita
               </button>
             </div>
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="https://placehold.co/400x300"
+              src="/lateralD.webp"
               alt="Vivienda tipo C"
               class="w-full object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo D</h3>
               <p class="text-gray-500 mb-4">4 dormitorios · 3 baños · 150m²</p>
-              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://example.com/vivienda-tipo-c')">
-                Ver detalles
+              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://kotekvirtual.es/visita-virtual-prueba/')">
+                Ver visita
               </button>
             </div>
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="https://placehold.co/400x300"
+              src="/lateralD.webp"
               alt="Vivienda tipo C"
               class="w-full object-cover"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo E</h3>
               <p class="text-gray-500 mb-4">4 dormitorios · 3 baños · 150m²</p>
-              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://example.com/vivienda-tipo-c')">
-                Ver detalles
+              <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openIframeModal('https://kotekvirtual.es/visita-virtual-prueba/')">
+                Ver visita
               </button>
             </div>
           </div>
@@ -183,10 +183,10 @@
         <div class="overflow-x-auto">
           <div class="flex space-x-4">
             <img src="/lateralD.webp" alt="Imagen 1" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 0)">
-            <img src="https://placehold.co/600x400" alt="Imagen 2" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 1)">
-            <img src="https://placehold.co/600x400" alt="Imagen 3" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 2)">
-            <img src="https://placehold.co/600x400" alt="Imagen 4" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 3)">
-            <img src="https://placehold.co/600x400" alt="Imagen 5" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 4)">
+            <img src="/lateralD.webp" alt="Imagen 2" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 1)">
+            <img src="/lateralD.webp" alt="Imagen 3" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 2)">
+            <img src="/lateralD.webp" alt="Imagen 4" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 3)">
+            <img src="/lateralD.webp" alt="Imagen 5" class="w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 4)">
           </div>
         </div>
       </div>
@@ -203,7 +203,7 @@
     <!-- Modal para iframes -->
     <div id="iframeModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeIframeModal(event)">
       <span class="absolute top-16 right-4 text-white text-3xl cursor-pointer" onclick="closeIframeModal(event)">&times;</span>
-      <iframe id="modalIframe" class="w-11/12 h-5/6"></iframe>
+      <iframe id="modalIframe" class="border-2 border-white w-11/12 h-5/6"></iframe>
     </div>
 
     <section id="ubicacion" class="py-16 md:py-24">
@@ -212,7 +212,7 @@
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <img
-              src="https://placehold.co/600x400"
+              src="/lateralD.webp"
               alt="Mapa de ubicación"
               class="rounded-lg"
             />
@@ -223,9 +223,9 @@
               <div>
                 <h3 class="text-xl font-bold mb-2">Dirección</h3>
                 <p class="text-gray-500">
-                  Calle Principal, 123
+                  Av. Rosalía Castro 148
                   <br />
-                  28001 Madrid
+                  15172 Oleiros
                 </p>
               </div>
             </div>
@@ -259,7 +259,7 @@
               </div>
               <div class="flex items-center gap-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                <p>info@residencialaurora.com</p>
+                <p>info@edificioriosar.es</p>
               </div>
             </div>
           </div>
@@ -297,7 +297,7 @@
                 </label>
                 <textarea id="mensaje" placeholder="¿Qué te gustaría saber?" name="mensaje" class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">Hola, me interesa esta promoción y me gustaría hacer una visita. Un saludo</textarea>
               </div>
-              <button type="submit" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+              <button type="submit" class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-white hover:bg-primary/90 h-10 px-4 py-2">
                 Enviar
               </button>
             </form>
@@ -311,16 +311,16 @@
     <div class="container">
       <div class="grid md:grid-cols-3 gap-8">
         <div>
-          <h3 class="font-bold mb-4">Edificio Locil</h3>
+          <h3 class="font-bold mb-4">Edificio Riosar</h3>
           <p class="text-sm text-gray-500">
-            Una promoción de viviendas de lujo diseñada para ofrecerte la máxima calidad de vida.
+            Viviendas de obra nueva con las excelentes calidades en una ubicación privilegiada.
           </p>
         </div>
         <div>
           <h3 class="font-bold mb-4">Contacto</h3>
           <div class="space-y-2 text-sm text-gray-500">
-            <p>Calle Principal, 123</p>
-            <p>28001 Madrid</p>
+            <p>Av. Rosalía Castro 148</p>
+            <p>15172 Oleiros</p>
             <p>900 123 456</p>
             <p>info@residencialaurora.com</p>
           </div>
@@ -341,7 +341,7 @@
         </div>
       </div>
       <div class="mt-8 pt-8 border-t text-center text-sm text-gray-500">
-        <p>© <script>document.write(new Date().getFullYear())</script> Edificio Locil. Todos los derechos reservados.</p>
+        <p>© <script>document.write(new Date().getFullYear())</script> Edificio Riosar. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -349,10 +349,10 @@
 <script>
   const images = [
     "/lateralD.webp",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400",
-    "https://placehold.co/600x400"
+    "/lateralD.webp",
+    "/lateralD.webp",
+    "/lateralD.webp",
+    "/lateralD.webp"
   ];
   let currentIndex = 0;
 
