@@ -25,7 +25,7 @@
   </script>
 </head>
 <body class="flex flex-col min-h-screen">
-  <header class="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <header class="sticky top-0 z-10 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
     <div class="container flex h-16 items-center justify-between">
       <a href="/" class="flex items-center space-x-2">
         <span class="text-xl font-bold">Edificio Riosar</span>
@@ -51,7 +51,7 @@
   </header>
   
   <main class="flex-1">
-    <section class="relative h-[80vh]">
+    <section class="relative h-screen">
       <img
         src="lateralD.webp"
         alt="Edificio Riosar"
@@ -99,15 +99,55 @@
       </div>
     </section>
 
+    <section id="descripcion" class="py-16 md:py-24">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <!-- Descripción -->
+          <div class="order-2 md:order-1">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tu nuevo hogar te espera</h2>
+            <p class="text-gray-500 mb-4">
+              Edificio Riosar es una promoción exclusiva de viviendas de obra nueva diseñadas para ofrecerte el máximo confort y calidad. 
+              Disfruta de amplias zonas comunes, acabados premium y una ubicación privilegiada cerca de todo lo que necesitas.
+            </p>
+            <p class="text-gray-500">
+              Con una calificación energética A, nuestras viviendas están pensadas para ser sostenibles y eficientes, 
+              cuidando tanto de tu bienestar como del medio ambiente.
+            </p>
+          </div>
+          <!-- Imagen -->
+          <div class="order-1 md:order-2">
+            <img src="/frontal.webp" alt="Edificio Riosar" class="rounded-lg shadow-lg object-cover w-full h-80 md:h-full">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="galeria" class="py-16 md:py-24 bg-muted">
+      <div class="container">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Galería</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <img src="/lateralI.webp" alt="Imagen 1" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 0)">
+          <img src="/frontal.webp" alt="Imagen 2" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 1)">
+          <img src="/lateralD.webp" alt="Imagen 3" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 2)">
+          <img src="/salon1.webp" alt="Imagen 4" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 3)">
+          <img src="/dormitorio1.webp" alt="Imagen 5" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 4)">
+          <img src="/cocina1.webp" alt="Imagen 6" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 5)">
+          <img src="/dormitorio2.webp" alt="Imagen 7" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 6)">
+          <img src="/salon2.webp" alt="Imagen 8" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 7)">
+          <img src="/salon3.webp" alt="Imagen 9" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 8)">
+          <img src="/aseo1.webp" alt="Imagen 10" class="w-full h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 9)">
+        </div>
+      </div>
+    </section>
     <section id="viviendas" class="py-16 md:py-24">
       <div class="container">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Tipos de viviendas</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="/planoA.webp"
+              src="/plano3DA.webp"
               alt="Vivienda tipo A"
-              class="w-full object-cover"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(0)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo A</h3>
@@ -119,9 +159,10 @@
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="/planoB.webp"
+              src="/plano3DB.webp"
               alt="Vivienda tipo B"
-              class="w-full object-cover"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(1)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo B</h3>
@@ -133,9 +174,10 @@
           </div>
           <div class="rounded-lg overflow-hidden border">
             <img
-              src="/planoC.webp"
+              src="/plano3DC.webp"
               alt="Vivienda tipo C"
-              class="w-full object-cover"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(2)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo C</h3>
@@ -148,8 +190,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoD.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo D"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(3)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo D</h3>
@@ -162,8 +205,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoE.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo E"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(4)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo E</h3>
@@ -177,8 +221,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoF.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo F"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(5)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo F</h3>
@@ -192,8 +237,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoG.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo G"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(6)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo G</h3>
@@ -207,8 +253,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoH.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo H"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(7)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo H</h3>
@@ -222,8 +269,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoI.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo I"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(8)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo I</h3>
@@ -237,8 +285,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoJ.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo J"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(9)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo J</h3>
@@ -252,8 +301,9 @@
           <div class="rounded-lg overflow-hidden border">
             <img
               src="/planoK.webp"
-              alt="Vivienda tipo C"
-              class="w-full object-cover"
+              alt="Vivienda tipo K"
+              class="w-full object-cover cursor-pointer"
+              onclick="openViviendaModal(10)"
             />
             <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Vivienda Tipo K</h3>
@@ -268,36 +318,24 @@
       </div>
     </section>
 
-    <section id="galeria" class="py-16 md:py-24 bg-muted">
-      <div class="container">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Galería</h2>
-        <div class="overflow-x-auto">
-          <div class="flex space-x-4">
-            <img src="/lateralI.webp" alt="Imagen 1" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 0)">
-            <img src="/frontal.webp" alt="Imagen 2" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 1)">
-            <img src="/lateralD.webp" alt="Imagen 3" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 2)">
-            <img src="/salon1.webp" alt="Imagen 4" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 3)">
-            <img src="/dormitorio1.webp" alt="Imagen 5" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 4)">
-            <img src="/cocina1.webp" alt="Imagen 1" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 5)">
-            <img src="/dormitorio2.webp" alt="Imagen 2" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 6)">
-            <img src="/salon2.webp" alt="Imagen 3" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 7)">
-            <img src="/salon3.webp" alt="Imagen 4" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 8)">
-            <img src="/aseo1.webp" alt="Imagen 5" class="draggable w-80 h-60 object-cover rounded-lg cursor-pointer" onclick="openModal(this, 9)">
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- Modal para imágenes -->
-    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeModal(event)">
+    <div id="imageModal" class="fixed z-50 inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeModal(event)">
       <span class="absolute top-16 right-4 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
       <span class="absolute left-4 text-white text-3xl cursor-pointer" onclick="prevImage(event)">&#10094;</span>
       <span class="absolute right-4 text-white text-3xl cursor-pointer" onclick="nextImage(event)">&#10095;</span>
       <img id="modalImage" class="max-w-full max-h-full">
     </div>
 
+    <!-- Modal para planos -->
+    <div id="planoModal" class="fixed z-50 inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeModal(event)">
+      <span class="absolute top-16 right-4 text-white text-3xl cursor-pointer" onclick="closeModal(event)">&times;</span>
+      <img id="modalPlan" class="max-w-full max-h-full">
+    </div>
+
     <!-- Modal para iframes -->
-    <div id="iframeModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeIframeModal(event)">
+    <div id="iframeModal" class="fixed z-50 inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden" onclick="closeIframeModal(event)">
       <span class="absolute top-16 right-4 text-white text-3xl cursor-pointer" onclick="closeIframeModal(event)">&times;</span>
       <iframe id="modalIframe" class="border-2 border-white w-11/12 h-5/6"></iframe>
     </div>
@@ -346,7 +384,7 @@
             </p>
             <div class="space-y-4">
               <div class="flex items-center gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-primary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                 <p>900 123 456</p>
               </div>
               <div class="flex items-center gap-4">
@@ -461,7 +499,11 @@
   }
 
   function closeModal(event) {
-    if (event.target.id === 'imageModal' || event.target.tagName === 'SPAN') {
+    // Verifica si el clic fue en el fondo de la modal o en la "X"
+    if (event.target.id === 'planoModal' || event.target.tagName === 'SPAN') {
+      document.getElementById('planoModal').classList.add('hidden');
+      document.removeEventListener('keydown', handleViviendaCloseKeydown);
+    } else if (event.target.id === 'imageModal' || event.target.tagName === 'SPAN') {
       document.getElementById('imageModal').classList.add('hidden');
       document.removeEventListener('keydown', handleKeydown);
     }
@@ -506,6 +548,35 @@
   function handleIframeKeydown(event) {
     if (event.key === 'Escape') {
       closeIframeModal(event);
+    }
+  }
+
+  const viviendaImages = [
+    "/plano3DA.webp", // Índice 0
+    "/plano3DB.webp", // Índice 1
+    "/plano3DC.webp", // Índice 2
+    "/planoD.webp",   // Índice 3
+    "/planoE.webp",   // Índice 4
+    "/planoF.webp",   // Índice 5
+    "/planoG.webp",   // Índice 6
+    "/planoH.webp",   // Índice 7
+    "/planoI.webp",   // Índice 8
+    "/planoJ.webp",   // Índice 9
+    "/planoK.webp",   // Índice 10
+  ];
+
+  let currentViviendaIndex = 0;
+
+  function openViviendaModal(index) {
+    currentViviendaIndex = index;
+    document.getElementById('modalPlan').src = viviendaImages[currentViviendaIndex];
+    document.getElementById('planoModal').classList.remove('hidden');
+    document.addEventListener('keydown', handleViviendaCloseKeydown);
+  }
+
+  function handleViviendaCloseKeydown(event) {
+    if (event.key === 'Escape') {
+      closeModal(event);
     }
   }
 
