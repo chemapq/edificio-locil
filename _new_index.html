@@ -7,6 +7,7 @@
   <title>Edificio Riosar</title>
   <link rel="icon" type="image/svg" href="/favicon.svg">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/360530dcac.js" crossorigin="anonymous"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -294,8 +295,8 @@
                 <span>3 dormitorios · 2 baños · 93m²</span>
                 <span class="font-bold text-right">400.832€</span>
               </p>
-              <button class="w-full inline-flex items-center justify-center rounded-md text-white font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-primary hover:bg-accent hover:bg-primary/90 h-10 px-4 py-2" onclick="openIframeModal(`https://3d.kotekvirtual.es/riosartipoh/`)">
-                Ver visita virtual
+              <button class="w-full inline-flex items-center justify-center rounded-md text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2" onclick="openViviendaModal(7)">
+                Ver ficha
               </button>
             </div>
             
@@ -388,7 +389,51 @@
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Ubicación privilegiada</h2>
         <div class="grid md:grid-cols-5 gap-8 items-center">
           <div class="md:col-span-3">
-            <iframe width="100%" height="500" src="https://www.openstreetmap.org/export/embed.html?bbox=-8.377289772033693%2C43.32929853822845%2C-8.36312770843506%2C43.33624404906803&amp;layer=mapnik&amp;marker=43.33277139293852%2C-8.370208740234375" style="border: 1px solid black"></iframe>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+              <image width="1920" height="1080" xlink:href="mapariosar.webp"></image> 
+              <a xlink:href="Playa Santa Cristina">
+                <g>
+                <rect x="952" y="242" width="404"></rect>
+                <text x="960" y="295" font-size="30">📍 PLAYA SANTA CRISTINA</text>
+                </g>
+              </a>
+              <a xlink:href="rio ">
+                <g>
+                  <rect x="187" y="804" width="300"></rect>
+                  <text x="200" y="855" font-size="30">📍 RÍA DEL BURGO</text>
+                </g>
+              </a>
+              <a xlink:href="Parque da II Republica">
+                <g>
+                  <rect x="1062" y="648" width="391"></rect>
+                  <text x="1078" y="700" font-size="30">📍 PARQUE II REPÚBLICA</text>
+                </g>
+              </a>
+              <a xlink:href="correos">
+                <g>
+                  <rect x="1030" y="523" width="216"></rect>
+                  <text x="1042" y="573" font-size="30">📍 CORREOS</text>
+                </g>
+              </a>
+              <a xlink:href="ALDI">
+                <g>
+                  <rect x="807" y="882" width="319"></rect>
+                  <text x="820" y="932" font-size="30">📍 SUPERMERCADO</text>
+                </g>
+              </a>
+              <a xlink:href="Biblioteca">
+                <g>
+                  <rect x="576" y="612" width="245"></rect>
+                  <text x="588" y="660" font-size="30">📍 BIBLIOTECA</text>
+                </g>
+              </a>
+              <a xlink:href="Farmacia">
+                <g>
+                  <rect x="576" y="762" width="234"></rect>
+                  <text x="590" y="812" font-size="30">📍 FARMACIA</text>
+                </g>
+              </a>
+            </svg>
           </div>
           <div class="space-y-6 md:col-start-4 md:col-span-2">
             <div class="flex items-start gap-4">
